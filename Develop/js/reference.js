@@ -15,7 +15,7 @@ var addDate = document.getElementById('currentDay');
 function checkTime () {
     var currentTime = m.format("H");
         //console.log(currentTime);
-    //var toDoTime = parseInt($(this).data("time"));
+    var toDoTime = parseInt($(this).data("time"));
     
     $(".toDo").each(function() {
         var toDoTime = $(this).data("time");
@@ -59,16 +59,16 @@ $("#timeblocks").on("click", ".toDo", function(){
 });
 
 
-// when the save button is clicked the task is saved and the text for the time block is saved into local storage
-// var list = JSON.parse(localStorage.getItem('todolist')) || [];
+// // when the save button is clicked the task is saved and the text for the time block is saved into local storage
+// // var list = JSON.parse(localStorage.getItem('todolist')) || [];
 
-// function renderTodos(list) {
-//     $('.task').empty();
+// // function renderTodos(list) {
+// //     $('.task').empty();
 
-//     for (var i = 0; list.length; i++) {
+// //     for (var i = 0; list.length; i++) {
 
-//     }
-// }
+// //     }
+// // }
 
 $("#timeblocks").on("click", ".save-btn", function() {
     var value = $(this)
@@ -85,15 +85,14 @@ $("#timeblocks").on("click", ".save-btn", function() {
 });
 
 
-
 function saveToDo(toDo) {
      var key = "time -" + $(toDo).data("time");
      var value = $(toDo).find(".task").text();
 
 
      localStorage.setItem(key, value);
-//     localStorage.setItem(key, text); 
-}
+
+ };
 
 function getSavedToDo() {
     $(".form-input").each(function() {
@@ -102,7 +101,7 @@ function getSavedToDo() {
     });
     
     
-}
+};
 
 
 // when the page is refreshed the data stays
