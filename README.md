@@ -6,7 +6,7 @@ An interactive work day schedulers. You can add ToDos on each our. When a ToDo i
 Today's date will be displayed at the top of the screen. 
 
 ### Website
-
+https://ortizjavier10.github.io/work-day-scheduler/
 
 ### Screenshot
 <img src="./images/screenshot.jpg">
